@@ -4,6 +4,8 @@ import {StyledRoot} from "@/providers/mui/styledRoot";
 import "./globals.css";
 import React from "react";
 import StoreProvider from "@/providers/ReduxProvider";
+import {ApolloProvider} from "@apollo/client";
+import ApolloProviders from "@/providers/ApolloProviders";
 
 export const metadata: Metadata = {
     title: "Tech Trend ",
@@ -22,9 +24,11 @@ export default function RootLayout({
         >
         <AppRouterCacheProvider>
             <StyledRoot>
-                <StoreProvider>
-                    {children}
-                </StoreProvider>
+                <ApolloProviders>
+                    <StoreProvider>
+                        {children}
+                    </StoreProvider>
+                </ApolloProviders>
             </StyledRoot>
         </AppRouterCacheProvider>
         </body>
