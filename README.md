@@ -1,36 +1,73 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## Overview
 
-## Getting Started
+**Tech Trend** is a step-based application built using Next.js, Material UI, Redux Toolkit (with RTK Query for GraphQL), and TypeScript. The application allows users to navigate through multiple steps, each representing a different part of the workflow. The app is designed with a modal-based step navigation and fetches data from a GraphQL API.
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- Step-based navigation using Redux for state management
+- Dynamic data fetching from a GraphQL API using RTK Query
+- Responsive UI built with Material UI and CSS Flexbox
+- Custom loading animations and error handling
+- Easy-to-navigate user interface with dynamic buttons
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Deployment
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+The project is deployed and can be accessed at:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+**[Live Demo](https://your-deployed-app-link.com)**
 
-## Learn More
+## Technologies Used
 
-To learn more about Next.js, take a look at the following resources:
+- **Next.js**: React framework for server-side rendering and static site generation
+- **Material UI**: UI library for styling and component-based design
+- **Redux Toolkit**: For managing global state and step transitions
+- **RTK Query**: Simplified data fetching with GraphQL support
+- **GraphQL**: API for fetching responsibilities data
+- **TypeScript**: Type-safe JavaScript for improved code quality and maintainability
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Installation & Setup
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+To run the project locally, follow these steps:
 
-## Deploy on Vercel
+1. Clone the repository:
+   ```bash
+   git clone git@github.com:Reconfort/TechTrendChallenge.git
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd TechTrendChallenge
+   ```
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
+4. Create a `.env.local` file in the root directory with the following variables:
+   ```bash
+   NEXT_PUBLIC_GRAPHQL_API_URL=http://example-graphql-api-url.com
+   ```
+5. Run the development server:
+   ```bash
+   npm run dev
+   ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+The app will be running at [http://localhost:3000](http://localhost:3000).
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Project Structure
+
+The project follows a modular structure:
+
+- **components/**: Contains all the reusable React components like buttons and the modal dialog.
+- **pages/**: Next.js page components.
+- **store/**: Redux store configuration and slices.
+- **types/**: Contains TypeScript interfaces and type definitions.
+- **lib/**: Apollo Client setup and other utility functions.
+
+## Technical Debt & Future Improvements
+
+While the core functionality of the app is in place, there are some areas that require further work:
+
+- **Profile Section**: The Profile section is currently under development and is not fully functional.
+- **Step Management**: Step navigation works, but there is room for improvement in handling edge cases, such as navigating back and forth between steps and preserving state correctly.
+- **Error Handling**: The app could benefit from improved error handling, particularly in cases where the GraphQL API fails or returns unexpected results.
+
+These areas will be addressed in future updates.
